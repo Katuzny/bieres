@@ -1,3 +1,16 @@
+<?php
+include('donnees.php');
+function ttc($prixht){
+	$prixttc=$prixht*1.2;
+	 /* Elle remplace les points par la virgule et elle arrondit à 2 décimales. Elle retourne le prix TTC */
+	return number_format($prixttc,2,",", ".");
+}
+function mutliplier($quantite){
+	 $quantite=document.getElementById (quantite)
+}
+?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -53,26 +66,42 @@
         </p>
     </form>
 
-	<table>
+		<h1>Bon de commande<h1>
 
+	<table>
+		
     <thead>
-        <tr>
-            <th><h1>Bon de commande<h1></th>
-        </tr>
-    </thead>
-    <tbody>
-    	
         <tr>
             <th>Nom de la bière</th>
             <th>Prix HT</th>
             <th>Prix TTC</th>
             <th>Quantité</th>
-            <th>Total TTC</th>
-
-
-        </tr>
+       	</tr>
+    </thead>
+    <tbody>
+    	<?php foreach($beerArray as $i => $value) : ?>
+			<tr>
+				<td><p class= "text-center"><?= $value[0] ?></p></td>			
+				<td><p class= "text-center">
+				<?
+					if ($quantite<=0) :
+						echo "number_format($value[3], 2, ',', '.')";
+					else :
+						echo "number_format($value[3]*$Quantite, 2, ',', '.')"; 
+				?>€</p></td>
+				<td><p class="text-center"><?= ttc($beerArray[$i][3])?>€</p></td>
+             	<td><input type="number" name="quantite" id="quantite"></td>
+       		</tr>
+			
+		<?php endforeach; ?>
+    	
     </tbody>
 </table>
+
+
+
+
+
 
 	<input type="submit" value="Envoyer">
 </body>
