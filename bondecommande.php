@@ -14,6 +14,66 @@
 	
 
 <div class="container">
-	
+
+	<form>
+        <h1>Vos coordonnées</h1>
+        <p>
+            <label for="nom">Nom</label> : <br/>
+            <input type="text" name="nom" id="nom" required>
+            
+        </p>
+        <p>
+            <label for="prenom">Prénom</label> : <br/>
+            <input type="text" name="prenom" id="prenom" required>
+        </p>
+        <p>
+            <label for="addresse">Adressse</label> : <br/>
+            <input type="text" name="addresse" id="addresse" required>
+            
+        </p>
+        <p>
+            <label for="cp">Code postal</label> : <br/>
+            <input type="text" name="cp" id="cp">
+        </p>
+        <p>
+            <label for="ville">Ville</label> : <br/>
+            <input type="text" name="ville" id="ville" required>
+        </p>
+        <p>
+            <label for="pays">Pays</label> : <br/>
+            <input type="text" name="pays" id="pays" required>
+        </p>
+        <p>
+            <label for="tel">Téléphone</label> : <br/>
+            <input type="text" name="tel" id="tel">
+        </p>
+        <p>
+            <label for="courriel">Courriel</label> : <br/>
+            <input type="email" name="courriel" id="courriel" required placeholder="utilisateur@domaine.fr">
+        </p>
+    </form>
+
+	<table>
+
+    <thead>
+        <tr>
+            <th><h1>Bon de commande<h1></th>
+        </tr>
+    </thead>
+    <tbody>
+    	
+        <tr>
+            <th>Nom de la bière</th>
+            <th>Prix HT</th>
+            <th>Prix TTC</th>
+            <th>Quantité</th>
+            <th>Total TTC</th>
+
+
+        </tr>
+    </tbody>
+</table>
+
+	<input type="submit" value="Envoyer">
 </body>
 </html>
